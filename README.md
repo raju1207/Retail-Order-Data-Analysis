@@ -1,60 +1,71 @@
-# Orders Dataset Analysis
-This repository contains a dataset and accompanying analysis for understanding order trends in a retail business.
+# Retail Order Data Analysis
 
-## Dataset Overview
-The dataset includes information about 9,994 orders, detailing customer demographics, product categories, and sales metrics. Below are the main columns and their descriptions:
+Analyze retail order data to gain insights into sales performance, revenue generation, profit margins, and customer trends.
 
-## Columns
-- **Order Id:** Unique identifier for each order.
-- **Order Date:** Date when the order was placed.
-- **Ship Mode:** Mode of shipment for the order (e.g., Second Class, Standard Class).
-- **Segment:** Customer segment (e.g., Consumer, Corporate).
-- **Country:** Country where the order was placed (all entries are "United States").
-- **City:** City of the customer.
-- **State:** State of the customer.
-- **Postal Code:** Postal code of the customer.
-- **Region:** Region of the customer (e.g., South, West).
-- **Category:** Product category (e.g., Furniture, Office Supplies).
-- **Sub Category:** Product subcategory (e.g., Bookcases, Labels).
-- **Product Id:** Unique identifier for each product.
-- **Cost Price:** Cost of the product for the retailer.
-- **List Price:** Retail price of the product.
-- **Quantity:** Number of units ordered.
-- **Discount Percent:** Discount applied to the order (in percentage).
+## Features
+- **Data Cleaning and Preprocessing**:
+  - Handling missing values and cleaning column names.
+  - Converting date formats and adding derived metrics.
 
-## Dataset Summary
-- **Number of Rows:** 9,994
-- **Number of Columns:** 16
-- **Missing Data:** Minimal, with only one missing value in the "Ship Mode" column.
+- **Data Transformation**:
+  - Splitting data into logical tables (`orders_details` and `sales_details`).
+  - Calculating revenue, discount, profit, and other metrics.
 
-## Sample Data
-|``Order Id``	| ``Order Date``	| ``Ship Mode``	| ``Segment``	| ``Country``	| ``City``	| ``...`` |
-|-------------|----------------|---------------|-------------|-------------|----------|---------|
-|1	 |2023-03-01	|Second Class|	Consumer	|United States|	Henderson|	...|
-|2	 |2023-08-15	|Second Class|	Consumer	|United States|	Henderson|	...|
-|3	 |2023-01-10	|Second Class|	Corporate|United States|	Los Angeles|	...|
+- **Database Integration**:
+  - Uploading processed data to PostgreSQL for storage and querying.
 
-## Repository Contents
-- ``orders.csv``: The dataset file.
-- ``analysis.ipynb``: A Jupyter notebook for exploring and analyzing the data.
-- ``README.md``: This documentation file.
+- **Data Analysis**:
+  - Performing insightful analyses, such as:
+    - Top revenue-generating products.
+    - Cities and regions with the highest profit margins.
+    - Total discounts and profits by category.
+    - Average sale prices per category or region.
 
-## Potential Analysis Goals
- 1. **Sales Trends:** Understand patterns in sales over time.
- 2. **Regional Performance:** Compare sales and profitability across different regions.
- 3. **Product Insights:** Identify top-performing product categories and subcategories.
- 4. **Discount Effectiveness:** Analyze the impact of discounts on sales.
+## Setup Instructions
+1. Install required Python libraries:
+   ```bash
+   pip install pandas numpy psycopg2 sqlalchemy kaggle
 
-## Usage Instructions
- 1. Clone the repository:
-   > ```git clone https://github.com/yourusername/orders-dataset-analysis.git```
-   > 
- 2. Install necessary Python libraries:
-   > ```pip install pandas matplotlib seaborn```
-   >  
- 3. Open the analysis notebook for detailed exploration:
-   > ```jupyter notebook analysis.ipynb```
-   > 
+## Download the dataset:
+
+   - **Source:** [Kaggle Retail Orders](https://www.kaggle.com/ankitbansal06/retail-orders)
+
+## Run the script to:
+
+   - Clean and preprocess data.
+   - Save results locally and upload them to PostgreSQL.
+
+# Usage
+ 1. Modify database credentials in the script:
+     ```host = "<your-host>"
+        user = "<your-user>"
+        password = "<your-password>"
+        database = "<your-database>"````
+
+2. Execute queries provided in the script to analyze:
+   - Revenue trends.
+   - Profit distribution.
+   - Customer segment performance.
+
+3. Access cleaned data and results in CSV format for visualization or reporting.
+
+## Results
+
+Key findings include:
+
+   - Top 10 highest revenue-generating products.
+   - Cities and regions with the highest profit margins.
+   - Total profits and discounts by category.
+   - Yearly revenue trends.
+
+## License
+
+[MIT License](LICENSE).
 
 ## Contributing
-Contributions are welcome! Feel free to open an issue or submit a pull request.
+
+Contributions are welcome! Please fork the repository and submit a pull request.
+
+```Let me know if you'd like to refine any part of the project or README further!```
+
+
