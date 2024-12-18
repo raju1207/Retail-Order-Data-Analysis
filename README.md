@@ -37,17 +37,20 @@ Analyze retail order data to gain insights into sales performance, revenue gener
 
 # Usage
  1. Modify database credentials in the script:
-     ```host = "<your-host>"
-        user = "<your-user>"
-        password = "<your-password>"
-        database = "<your-database>"````
+     ```
+     host = "<your-host>"
+     user = "<your-user>"
+     password = "<your-password>"
+     database = "<your-database>"
 
-2. Execute queries provided in the script to analyze:
+      ````
+
+3. Execute queries provided in the script to analyze:
    - Revenue trends.
    - Profit distribution.
    - Customer segment performance.
 
-3. Access cleaned data and results in CSV format for visualization or reporting.
+4. Access cleaned data and results in CSV format for visualization or reporting.
 
 ## Results
 
@@ -66,6 +69,9 @@ Key findings include:
 
 Contributions are welcome! Please fork the repository and submit a pull request.
 
-```Let me know if you'd like to refine any part of the project or README further!```
+```
+Let me know if you'd like to refine any part of the project or README further!
+
+```
 
 
